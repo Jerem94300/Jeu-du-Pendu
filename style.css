@@ -1,0 +1,229 @@
+@import url(/reset.css);
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  height: auto;
+}
+
+.container__image{
+  width: 1400px;
+  display: none;
+  justify-content: center;
+}
+
+.intro__paragraph {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn__random {
+  width: 150px;
+  height: 75px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #f76c6c;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.btn__random:hover{
+  opacity: 70%;
+  background-color: green;
+  color: black;
+}
+
+.clavier {
+ display: grid;
+ grid-template-columns: repeat(10, 1fr);
+ margin: 20px auto;
+ max-width: 600px;
+margin-bottom: 2rem;
+}
+
+.touch__clavier{
+  min-width: 60px;
+  min-height: 50px;
+  background-color: #f7f7f7;
+  border: 2px solid #333;
+  border-radius: 5px !;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: backgound-color 0.3s ease, transform 0.2s ease;
+
+}
+
+
+
+.touch__clavier:hover {
+  background-color: rgb(89, 147, 235);
+  transform: scale(1.1);
+
+}
+.touch__clavier:active{
+  background-color: #4682b4;
+  transform: scale(0.7);
+
+}
+
+
+
+
+
+
+
+
+.result1{
+display: none;
+
+
+}
+.image__pendu {
+  width: 250px;
+  height: 300px;
+  border: 4px solid rgb(12, 158, 226);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 1rem;
+ overflow: hidden;
+
+
+}
+
+.pendu__content {
+z-index: -1;
+
+}
+
+.move__image {
+  transform: translateX(-250px);
+}
+
+.move__image2 {
+  transform: translateX(-500px);
+}
+
+.move__image3 {
+  transform: translateX(-750px);
+}
+.move__image4 {
+  transform: translateX(-1000px);
+}
+
+.move__image5 {
+  transform: translateX(-1250px);
+}
+
+.move__image6 {
+  transform: translateX(-1500px);
+}
+
+.move__image7 {
+  transform: translateX(-1750px);
+}
+
+.move__image8 {
+  transform: translateX(-2000px);
+}
+.move__image9 {
+  transform: translateX(-2250px);
+}
+
+.result__clavier {
+  width: 700px;
+  height: 50px;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.touch {
+  width: 40px;
+  height: 60px;
+  border: 2px solid black;
+}
+.table__result td {
+  border-spacing: 2rem;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.touch2 {
+  width: 40px;
+  height: 60px;
+  border: 2px solid black;
+}
+
+.message{
+
+  font-size: 42px;
+  font-weight: bold;
+}
+
+
+.btn__replay{
+  width: 150px;
+  height: 75px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #f76c6c;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+  display: none;
+  text-decoration: none;
+
+}
+
+.btn__replay:hover{
+
+  opacity: 70%;
+  background-color: green;
+  color: black;
+}
+
+
+.link__btn {
+  text-decoration: none;
+}
