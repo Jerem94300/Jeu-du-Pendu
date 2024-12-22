@@ -1,6 +1,6 @@
 @import url(/reset.css);
-
 body {
+  background: linear-gradient(135deg, #4facfe, #3a7579);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -10,7 +10,6 @@ body {
   align-items: center;
   min-height: 100vh;
   color: #333;
-
 }
 
 .header {
@@ -26,11 +25,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1400px;
+  max-width: 1040px;
+  width: 100%;
   height: auto;
 }
 
-.container__image{
+.container__image {
   width: 1400px;
   display: none;
   justify-content: center;
@@ -58,59 +58,65 @@ body {
   margin-bottom: 2rem;
 }
 
-.btn__random:hover{
+.btn__random:hover {
   opacity: 70%;
   background-color: green;
   color: black;
 }
 
 .clavier {
- display: grid;
- grid-template-columns: repeat(10, 1fr);
- margin: 20px auto;
- max-width: 600px;
-margin-bottom: 2rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  
 }
 
-.touch__clavier{
-  min-width: 60px;
-  min-height: 50px;
+.tbody__clavier {
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tr__clavier{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.touch__clavier {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: auto;
   background-color: #f7f7f7;
   border: 2px solid #333;
-  border-radius: 5px !;
-  text-align: center;
-  line-height: 50px;
+  border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: backgound-color 0.3s ease, transform 0.2s ease;
-
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-
 
 .touch__clavier:hover {
   background-color: rgb(89, 147, 235);
   transform: scale(1.1);
-
 }
-.touch__clavier:active{
+.touch__clavier:active {
   background-color: #4682b4;
   transform: scale(0.7);
-
 }
 
-
-
-
-
-
-
-
-.result1{
-display: none;
-
-
+.result1 {
+  display: none;
 }
 .image__pendu {
   width: 250px;
@@ -120,14 +126,11 @@ display: none;
   justify-content: start;
   align-items: center;
   margin-bottom: 1rem;
- overflow: hidden;
-
-
+  overflow: hidden;
 }
 
 .pendu__content {
-z-index: -1;
-
+  z-index: -1;
 }
 
 .move__image {
@@ -191,14 +194,12 @@ z-index: -1;
   border: 2px solid black;
 }
 
-.message{
-
+.message {
   font-size: 42px;
   font-weight: bold;
 }
 
-
-.btn__replay{
+.btn__replay {
   width: 150px;
   height: 75px;
   padding: 10px 20px;
@@ -213,17 +214,61 @@ z-index: -1;
   margin-bottom: 2rem;
   display: none;
   text-decoration: none;
-
 }
 
-.btn__replay:hover{
-
+.btn__replay:hover {
   opacity: 70%;
   background-color: green;
   color: black;
 }
 
-
 .link__btn {
   text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .tr__clavier{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-self: center;
+  }
+
+  .touch__clavier {
+    height: 40px; 
+    font-size: 14px; 
+  }
+
+  .result__clavier{
+
+    width: 100% !important;
+  }
+
+  .table__result td {
+    border-spacing: 2rem;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .message {
+    font-size: 21px;
+    font-weight: bold;
+    color: #f76c6c;
+  }
 }

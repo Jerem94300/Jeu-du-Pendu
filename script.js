@@ -89,29 +89,51 @@ const selectLetter = (td) => {
   if (result.length === 0) {
     tentativesRestantes--;
     // Appliquer la classe de mouvement correspondante
+    if (tentativesRestantes === 8) {
+      imagePendu.classList.add("move__image");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
+    }
+
     if (tentativesRestantes === 7) {
       imagePendu.classList.add("move__image2");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 6) {
       imagePendu.classList.add("move__image3");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 5) {
       imagePendu.classList.add("move__image4");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 4) {
       imagePendu.classList.add("move__image5");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 3) {
       imagePendu.classList.add("move__image6");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 2) {
       imagePendu.classList.add("move__image7");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 1) {
       imagePendu.classList.add("move__image8");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
     if (tentativesRestantes === 0) {
       imagePendu.classList.add("move__image9");
+      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
+
     }
   }
 
@@ -132,7 +154,7 @@ const selectLetter = (td) => {
 
   if (isWin) {
     message.textContent = "Bravo, vous avez gagné !";
-    message.style.color = "green";
+    message.style.color = "black";
     btnReplay.style.display = "block"; // Afficher le bouton Rejouer
     btnRandom.disabled = true; // Désactiver le bouton Jouer
   }
