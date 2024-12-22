@@ -36,6 +36,9 @@ const aplhabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 const blockPendu = document.querySelector(".container__image");
 const btnReplay = document.querySelector(".btn__replay");
 const touch2 = document.querySelectorAll(".touch2");
+const tableClavier = document.querySelector('.clavier');
+const resultClavier = document.querySelector('.result__clavier');
+const tableResult = document.querySelector('.result2');
 
 let clavier = document.querySelectorAll(".touch__clavier");
 let btnRandom = document.querySelector(".btn__random");
@@ -57,9 +60,18 @@ mots = mots.map((word) => normalize(word));
 let randomIndex = Math.floor(Math.random() * mots.length);
 let randomMots = mots[randomIndex];
 
+tableClavier.style.display = "none";
+resultClavier.style.display = "none";
+tableResult.style.display = "none";
+
 btnRandom.addEventListener("click", function () {
+  tableClavier.style.display = "block";
+  resultClavier.style.display = "block";
+  tableResult.style.display = "block";
+
   touch2.forEach((caseResult) => (caseResult.textContent = "")); // Réinitialiser les cases
   blockPendu.style.display = "flex";
+  
   message.textContent = ""; // Effacer les anciens messages
   imagePendu.className = "pendu__content"; // Réinitialiser l'image
   tentativesRestantes = 9; // Réinitialiser les tentatives
@@ -176,3 +188,5 @@ btnReplay.addEventListener("click", function () {
   touch2.forEach((caseResult) => (caseResult.textContent = ""));
   console.log("Jeu réinitialisé. Nouveau mot :", arrayWord);
 });
+
+
