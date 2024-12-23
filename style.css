@@ -11,8 +11,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   min-height: 100vh;
   color: #333;
 }
@@ -29,8 +28,8 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
   max-width: 1040px;
   width: 100%;
   height: auto;
@@ -44,6 +43,7 @@ body {
 
 .title__h1{
   color: #f7f7f7;
+  margin-top: 2rem;
 
 }
 
@@ -95,6 +95,7 @@ body {
   gap: 10px;
   width: 900px;
   height: 200px;
+  margin-top: 30rem;
 }
 
 .tr__clavier{
@@ -250,8 +251,7 @@ body {
   .header {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100px;
+   
   }
 
   .container {
