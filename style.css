@@ -1,6 +1,11 @@
 @import url(reset.css);
 body {
-  background: linear-gradient(135deg, #4facfe, #3a7579);
+  /* background: linear-gradient(135deg, #4facfe, #3a7579); */
+
+  background-image: url('assets/img_hexagones.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -21,6 +26,7 @@ body {
 }
 
 .container {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,11 +42,18 @@ body {
   justify-content: center;
 }
 
+.title__h1{
+  color: #f7f7f7;
+
+}
+
 .intro__paragraph {
   margin-bottom: 2rem;
   text-align: center;
   font-size: 48px;
   font-weight: bold;
+  color: #f7f7f7;
+
 }
 
 .btn__random {
@@ -122,6 +135,8 @@ body {
 .result1 {
   display: none;
 }
+
+
 .image__pendu {
   width: 250px;
   height: 300px;
@@ -195,7 +210,8 @@ body {
 .touch2 {
   width: 40px;
   height: 60px;
-  border: 2px solid black;
+  border: 2px solid white;
+  color: #f7f7f7;
 }
 
 .message {
