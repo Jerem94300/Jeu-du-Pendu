@@ -291,6 +291,7 @@ body {
   display: flex;
   align-self: center !important;
   justify-self: center !important;
+
 }
 
 
@@ -305,7 +306,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-self: center !important;
-    margin-bottom: 2rem;
+    column-gap: 0;
   }
 
   .touch__clavier {
