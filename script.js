@@ -39,6 +39,7 @@ const touch2 = document.querySelectorAll(".touch2");
 const tableClavier = document.querySelector('.clavier');
 const resultClavier = document.querySelector('.result__clavier');
 const tableResult = document.querySelector('.result2');
+const paragraphMain = document.querySelector('.intro__paragraph')
 
 let clavier = document.querySelectorAll(".touch__clavier");
 let btnRandom = document.querySelector(".btn__random");
@@ -68,6 +69,7 @@ btnRandom.addEventListener("click", function () {
   tableClavier.style.display = "block";
   resultClavier.style.display = "block";
   tableResult.style.display = "block";
+  paragraphMain.style.display = "none";
 
   touch2.forEach((caseResult) => (caseResult.textContent = "")); // Réinitialiser les cases
   blockPendu.style.display = "flex";
