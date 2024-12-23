@@ -272,6 +272,28 @@ body {
 
 }
 
+.clavier{
+  display: flex;
+  justify-self: center !important;
+  align-self: center !important;
+  margin-top: 15rem;
+  min-height: 400px;
+
+
+
+
+
+}
+
+
+.tbody__clavier {
+
+  display: flex;
+  align-self: center !important;
+  justify-self: center !important;
+}
+
+
 
 
 
