@@ -250,7 +250,8 @@ body {
   .header {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    position: absolute;
+    top: 100px;
   }
 
   .container {
@@ -261,12 +262,32 @@ body {
     align-items: center !important;
   }
 
+  .btn__random {
+    position: absolute;
+    top: 200px;
+
+
+  }
+
+
+.intro__paragraph {
+
+  font-size: 24px;
+
+
+}
+
+
+
+
+
   .tr__clavier{
-    width: 100%;
+    width: 40%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    align-self: center;
+    align-self: center !important;
   }
 
   .touch__clavier {
@@ -276,6 +297,8 @@ body {
 
   .result__clavier{
 
+    position: absolute;
+    bottom: 450px;
     width: 100% !important;
   }
 
@@ -291,6 +314,8 @@ body {
 
   .container__image {
     order: 2;
+    position: absolute;
+    bottom: 100px;
   }
 
   .message {
