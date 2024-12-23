@@ -251,6 +251,7 @@ body {
   .header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
    
   }
 
@@ -287,6 +288,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-self: center !important;
+    margin-bottom: 2rem;
   }
 
   .touch__clavier {
