@@ -95,7 +95,6 @@ body {
   gap: 10px;
   width: 900px;
   height: 200px;
-  margin-top: 30rem;
 }
 
 .tr__clavier{
@@ -263,11 +262,7 @@ body {
     align-items: center !important;
   }
 
-  .btn__random {
-    top: 200px;
 
-
-  }
 
 
 .intro__paragraph {
