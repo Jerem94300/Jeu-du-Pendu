@@ -2,15 +2,17 @@
 body {
   /* background: linear-gradient(135deg, #4facfe, #3a7579); */
 
-  background-image: url('assets/img_hexagones.jpg');
+  background-image: url("assets/img_hexagones.jpg");
   background-repeat: no-repeat;
   background-size: cover;
- 
+
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   min-height: 100vh;
   color: #333;
@@ -25,13 +27,12 @@ body {
 }
 
 .container {
-
   display: flex;
   flex-direction: column;
   justify-content: center !important;
   align-items: center !important;
   max-width: 1040px;
-  width: 100%;
+  width: 100% !important;
   height: auto;
 }
 
@@ -41,22 +42,21 @@ body {
   justify-content: center;
 }
 
-.title__h1{
+.title__h1 {
   color: #f7f7f7;
   margin-top: 2rem;
-
 }
 
 .intro__paragraph {
   margin-bottom: 2rem;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: bold;
   color: #f7f7f7;
-
 }
 
-.btn__random {
+.btn__random,
+.btn__replay {
   width: 150px;
   height: 75px;
   padding: 10px 20px;
@@ -67,15 +67,21 @@ body {
   border: none;
   border-radius: 5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Uniformisation */
   margin-bottom: 2rem;
-  
+  text-decoration: none;
 }
 
-.btn__random:hover {
+.btn__random:hover,
+.btn__replay:hover {
   opacity: 70%;
   background-color: green;
   color: black;
+  transform: scale(1.1); /* Ajout d'un effet de zoom */
+}
+
+.btn__replay {
+  display: none; /* Masquer le bouton Rejouer par défaut */
 }
 
 .clavier {
@@ -84,11 +90,10 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-  
 }
 
 .tbody__clavier {
-  display:  flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -97,7 +102,7 @@ body {
   height: 200px;
 }
 
-.tr__clavier{
+.tr__clavier {
   width: 80%;
   height: 80%;
   display: flex;
@@ -106,9 +111,8 @@ body {
   gap: 10px;
 }
 
-
 .touch__clavier {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -136,7 +140,6 @@ body {
   display: none;
 }
 
-
 .image__pendu {
   width: 250px;
   height: 300px;
@@ -150,6 +153,7 @@ body {
 
 .pendu__content {
   z-index: -1;
+  transition: transform 0.5s ease; /* Ajout d'une transition fluide */
 }
 
 .move__image {
@@ -219,29 +223,6 @@ body {
   font-weight: bold;
 }
 
-.btn__replay {
-  width: 150px;
-  height: 75px;
-  padding: 10px 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  background-color: #f76c6c;
-  border: none;
-  border-radius: 5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 2rem;
-  display: none;
-  text-decoration: none;
-}
-
-.btn__replay:hover {
-  opacity: 70%;
-  background-color: green;
-  color: black;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -256,7 +237,7 @@ footer {
   text-decoration: none;
 }
 
-.link__portfolio{
+.link__portfolio {
   margin-top: 2rem;
   font-size: 16px;
   font-weight: lighter;
@@ -264,102 +245,87 @@ footer {
   text-decoration: none;
 }
 
-.link__portfolio:hover{
+.link__portfolio:hover {
   color: red;
 }
 
-
 @media screen and (max-width: 500px) {
-  .header {
+  header {
+    display: none !important;
+  }
+
+  .intro__paragraph {
+    font-size: 24px;
+  }
+  .btn__random {
+    margin-top: 4.5rem;
+  }
+
+  body {
+    width: 100% !important;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-   
   }
 
   .container {
-    width: 100%;
-    max-width: 500px;
+    width: 100% !important ;
+    height: 100vh;
+    margin-left: 2rem;
     display: flex;
-    justify-content: center !important;
     align-items: center !important;
-  }
-
-
-
-
-.intro__paragraph {
-
-  font-size: 24px;
-
-
-}
-
-.clavier{
-  display: flex;
-  justify-self: center !important;
-  align-self: center !important;
-  margin-top: 15rem;
-  min-height: 400px;
-
-
-
-
-
-}
-
-
-.tbody__clavier {
-
-  display: flex;
-  align-self: center !important;
-  justify-self: center !important;
-
-}
-
-
-
-
-
-
-  .tr__clavier{
-    width: 40%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    justify-content: center !important;
+    justify-self: center !important;
     align-self: center !important;
-    column-gap: 0;
   }
 
+  .title__h1 {
+    margin-bottom: 4rem;
+  }
+
+  .tbody__clavier {
+    width: 100%;
+    height: auto;
+  }
   .touch__clavier {
-    height: 40px; 
-    font-size: 14px; 
+    width: 50px;
+    height: 35px;
+    font-size: 16px;
   }
 
-  .result__clavier{
-
-    width: 100% !important;
+  .result__clavier {
+    width: 500px;
   }
 
+  .result2 {
+    margin-top: 2rem;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .touch2 {
+    width: 18px;
+    height: auto;
+  }
 
   .table__result td {
-    border-spacing: 2rem;
-    font-size: 21px;
-    font-weight: bold;
-    text-align: center;
-    order: 1;
+    font-size: 24px;
+  }
+
+  .tr__clavier {
+    width: 50%;
+    height: auto;
+    gap: 2px;
   }
 
   .container__image {
-    order: 2;
-
+    width: 100%;
+    height: auto;
   }
-
   .message {
-    font-size: 21px;
-    font-weight: bold;
-    color: #f76c6c;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }

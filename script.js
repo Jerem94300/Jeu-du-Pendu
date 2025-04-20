@@ -36,10 +36,10 @@ const aplhabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 const blockPendu = document.querySelector(".container__image");
 const btnReplay = document.querySelector(".btn__replay");
 const touch2 = document.querySelectorAll(".touch2");
-const tableClavier = document.querySelector('.clavier');
-const resultClavier = document.querySelector('.result__clavier');
-const tableResult = document.querySelector('.result2');
-const paragraphMain = document.querySelector('.intro__paragraph')
+const tableClavier = document.querySelector(".clavier");
+const resultClavier = document.querySelector(".result__clavier");
+const tableResult = document.querySelector(".result2");
+const paragraphMain = document.querySelector(".intro__paragraph");
 
 let clavier = document.querySelectorAll(".touch__clavier");
 let btnRandom = document.querySelector(".btn__random");
@@ -73,7 +73,7 @@ btnRandom.addEventListener("click", function () {
 
   touch2.forEach((caseResult) => (caseResult.textContent = "")); // Réinitialiser les cases
   blockPendu.style.display = "flex";
-  
+
   message.textContent = ""; // Effacer les anciens messages
   imagePendu.className = "pendu__content"; // Réinitialiser l'image
   tentativesRestantes = 9; // Réinitialiser les tentatives
@@ -102,52 +102,11 @@ const selectLetter = (td) => {
 
   if (result.length === 0) {
     tentativesRestantes--;
-    // Appliquer la classe de mouvement correspondante
-    if (tentativesRestantes === 8) {
-      imagePendu.classList.add("move__image");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
 
-    }
-
-    if (tentativesRestantes === 7) {
-      imagePendu.classList.add("move__image2");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 6) {
-      imagePendu.classList.add("move__image3");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 5) {
-      imagePendu.classList.add("move__image4");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 4) {
-      imagePendu.classList.add("move__image5");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 3) {
-      imagePendu.classList.add("move__image6");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 2) {
-      imagePendu.classList.add("move__image7");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 1) {
-      imagePendu.classList.add("move__image8");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
-    }
-    if (tentativesRestantes === 0) {
-      imagePendu.classList.add("move__image9");
-      console.log(`Classe ajoutée : move__image${tentativesRestantes}`);
-
+    // Appliquer la classe de mouvement correspondante de manière dynamique
+    if (tentativesRestantes >= 1 && tentativesRestantes <= 9) {
+      imagePendu.classList.add(`move__image${9 - tentativesRestantes}`);
+      console.log(`Classe ajoutée : move__image${9 - tentativesRestantes}`);
     }
   }
 
@@ -161,7 +120,6 @@ const selectLetter = (td) => {
   }
 
   // Vérifier si le mot est entièrement trouvé (victoire)
-  //  dans ce cas parcourt le tableau des lettres  et compare chaque lettre (every()) avec le contenu des cases correspondantes
   const isWin = arrayWord.every(
     (letter, index) => touch2[index].textContent === letter.toUpperCase()
   );
@@ -190,5 +148,3 @@ btnReplay.addEventListener("click", function () {
   touch2.forEach((caseResult) => (caseResult.textContent = ""));
   console.log("Jeu réinitialisé. Nouveau mot :", arrayWord);
 });
-
-
